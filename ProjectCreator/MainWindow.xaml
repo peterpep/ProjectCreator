@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectCreator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="450" Width="525">
     <Grid>
+        <Label x:Name="EcoLabel" Content="Enter ECO #:" Height="25" Width="75" Margin="10,55,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        <Label x:Name="ProjectPathLabel" Content="Project Directory:" Margin="10,25,0,0" Height="25" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        <TextBox x:Name="ProjectPath" Margin="110,25,0,0" Height="25" Width="350" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"></TextBox>
+        <TextBox x:Name="EcoNumber" Width="100" Height="25" Margin="85,55,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center"></TextBox>
         
+        <Label x:Name="TemplateLabel" Content="Available Templates" Height="25" Width="115" Margin="40,95,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        <ListView x:Name="TemplateList" Width="150" Height="220" Margin="20,115,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"></ListView>
+        
+        <Label x:Name="TemplateContentsLabel" Content="Template Contents" Height="25" Width="110" Margin="240,95,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
+        <TreeView x:Name="TemplateContentView" Margin="220,115,0,0" Height="220" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top"></TreeView>
+        
+        <Button x:Name="AddTemplateBtn" Content="Add Template" Height="25" Width="100" Margin="400,95,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="AddTemplateBtn_OnClick"></Button>
+        <Button x:Name="RemoveTemplateBtn" Content="Remove Template" Height="25" Width="100" Margin="400,125,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="RemoveTemplateBtn_OnClick"></Button>
+        <Button x:Name="CreateProjectFolders" Content="Create Folders" Height="25" Width="100" Margin="400,155,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CreateProjectFolders_OnClick"></Button>
     </Grid>
 </Window>
